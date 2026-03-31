@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "name": "CodeMaster IDE",
+        "description": "A powerful cloud-based IDE for fast and efficient coding with real-time collaboration.",
+        "price": 12,
+        "period": "monthly",
+        "tag": "Popular",
+        "tagType": "popular",
+        "features": ["Real-time collaboration", "Auto code completion", "Multi-language support"],
+        "image": "https://images.seeklogo.com/logo-png/61/1/codemasters-logo-png_seeklogo-619127.png"
+    },
+    {
+        "id": 2,
+        "name": "DevTrack Pro",
+        "description": "Advanced project and issue tracking tool for agile development teams.",
+        "price": 99,
+        "period": "yearly",
+        "tag": "Best Seller",
+        "tagType": "best-seller",
+        "features": ["Kanban boards", "Sprint planning", "Bug tracking"],
+        "image": "https://img.freepik.com/premium-vector/pro-logo-pro-letter-pro-letter-logo-design-initials-pro-logo-linked-with-circle-uppercase-monogram-logo-pro-typography-technology-business-real-estate-brand_229120-82319.jpg?semt=ais_hybrid&w=740&q=80"
+    },
+    {
+        "id": 3,
+        "name": "API Tester X",
+        "description": "Test and debug APIs seamlessly with an intuitive interface.",
+        "price": 0,
+        "period": "one-time",
+        "tag": "New",
+        "tagType": "new",
+        "features": ["REST & GraphQL support", "Request history", "Environment variables"],
+        "image": "https://img.freepik.com/premium-vector/api-testing-icon-vector-image-can-be-used-software-testing_120816-356141.jpg"
+    },
+    {
+        "id": 4,
+        "name": "DeployNow",
+        "description": "One-click deployment platform for frontend and backend applications.",
+        "price": 15,
+        "period": "monthly",
+        "tag": "Popular",
+        "tagType": "popular",
+        "features": ["CI/CD integration", "Custom domains", "Auto scaling"],
+        "image": "https://images.seeklogo.com/logo-png/27/1/deploy-logo-png_seeklogo-273159.png"
+    },
+    {
+        "id": 5,
+        "name": "UI Builder Pro",
+        "description": "Drag-and-drop UI builder for modern web applications.",
+        "price": 49,
+        "period": "one-time",
+        "tag": "Best Seller",
+        "tagType": "best-seller",
+        "features": ["Pre-built components", "Responsive design", "Export to React"],
+        "image": "https://img.freepik.com/free-vector/logo-design-combination-letters-u-i_557339-378.jpg?semt=ais_incoming&w=740&q=80"
+    },
+    {
+        "id": 6,
+        "name": "GitFlow Manager",
+        "description": "Simplify Git workflows with visual branching and merging tools.",
+        "price": 10,
+        "period": "monthly",
+        "tag": "Popular",
+        "tagType": "popular",
+        "features": ["Branch visualization", "Merge conflict resolver", "Commit history"],
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-cU1VlSQ8SvcjmhQ4Nj99F0y8cUq-1ef5_g&s"
+    },
+    {
+        "id": 7,
+        "name": "DB Studio",
+        "description": "Manage and visualize databases with ease.",
+        "price": 79,
+        "period": "yearly",
+        "tag": "New",
+        "tagType": "new",
+        "features": ["SQL editor", "Database diagrams", "Multi-DB support"],
+        "image": "https://img.freepik.com/free-vector/gradient-monogram-logo-design_23-2150549885.jpg?semt=ais_incoming&w=740&q=80"
+    },
+    {
+        "id": 8,
+        "name": "AuthSecure",
+        "description": "Authentication and authorization tool for modern apps.",
+        "price": 20,
+        "period": "monthly",
+        "tag": "Best Seller",
+        "tagType": "best-seller",
+        "features": ["OAuth integration", "JWT support", "User management"],
+        "image": "https://img.freepik.com/free-vector/shield_78370-582.jpg?semt=ais_incoming&w=740&q=80"
+    },
+    {
+        "id": 9,
+        "name": "Performance Monitor",
+        "description": "Track and optimize application performance in real time.",
+        "price": 25,
+        "period": "monthly",
+        "tag": "Popular",
+        "tagType": "popular",
+        "features": ["Real-time analytics", "Error tracking", "Performance insights"],
+        "image": "https://cdn-icons-png.freepik.com/256/15749/15749119.png?semt=ais_white_label"
+    },
+    {
+        "id": 10,
+        "name": "Snippet Vault",
+        "description": "Save and organize reusable code snippets efficiently.",
+        "price": 5,
+        "period": "monthly",
+        "tag": "New",
+        "tagType": "new",
+        "features": ["Snippet tagging", "Cloud sync", "Search & filter"],
+        "image": "https://img.freepik.com/premium-vector/vault-logo-with-letter-c-concept_11481-592.jpg?semt=ais_incoming&w=740&q=80"
+    }
+]
