@@ -4,6 +4,7 @@ import Banner from './components/Banner'
 import StatsSection from './components/StatsSection'
 import Footer from './components/Footer'
 import GetStarted from './components/GetStarted'
+import Pricing from './components/Pricing'
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
             <Navbar />
             <Banner />
             <StatsSection />
+            <Pricing />
             <GetStarted />
             <Footer />
         </>
