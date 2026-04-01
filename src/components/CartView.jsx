@@ -16,9 +16,8 @@ function CartView({ cartItems, handleRemoveFromCart, clearAllCart }) {
                         <div className="flex flex-col">
                             <h4 className="font-bold text-slate-800 text-lg">{item.name}</h4>
                             <div className="flex items-center gap-4 text-sm text-slate-500 mt-1">
-                                <span className="flex items-center gap-1">⬇️ {item.downloads || '9M'}</span>
+                                <span className="flex items-center gap-1">Price: ${item.price}</span>
                                 <span className="flex items-center gap-1 text-orange-500">⭐ {item.rating || '5'}</span>
-                                <span>{item.size || '258 MB'}</span>
                             </div>
                         </div>
                     </div>
