@@ -29,6 +29,16 @@ function DevTools({ cartItems, setCartItems }) {
         }
     }
 
+    const handleRemoveFromCart = (productId) => {
+        const updateCart = cartItems.filter(item => item.id !== productId);
+        setCartItems(updateCart);
+
+        toast.error("Product is removed!", {
+            autoClose: 1000,
+            position: "top-right"
+        });
+    }
+
 
     return (
         <section className="py-20 px-6 bg-white">
@@ -75,7 +85,6 @@ function DevTools({ cartItems, setCartItems }) {
 
                             return <DevToolsCart key={tool.id} tool={tool} tagStyles={tagStyles} handleAddToCart={handleAddToCart} checkCart={checkCart} />
                         })}
-                        <ToastContainer />
                     </div>
                 ) : (
                     <div className="space-y-4">
@@ -85,7 +94,7 @@ function DevTools({ cartItems, setCartItems }) {
                         </div>
 
                         {cartItems.length > 0 ? (
-                            <CartView cartItems={cartItems} />
+                            <CartView cartItems={cartItems} handleRemoveFromCart={handleRemoveFromCart} />
                         ) : (
                             /* Empty Cart View */
                             <div className="text-center py-20 bg-slate-50 rounded-3xl border-2 border-dashed border-slate-200">
@@ -95,7 +104,7 @@ function DevTools({ cartItems, setCartItems }) {
                         )}
                     </div>
                 )}
-
+                <ToastContainer />
             </div>
         </section>
     )
