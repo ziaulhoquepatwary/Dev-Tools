@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CartView({ cartItems, handleRemoveFromCart }) {
+function CartView({ cartItems, handleRemoveFromCart, clearAllCart }) {
     return (
         <div className="flex flex-col gap-4">
             {cartItems.map((item) => (
@@ -26,7 +26,7 @@ function CartView({ cartItems, handleRemoveFromCart }) {
                     {/* Action Button */}
                     <div className="w-full md:w-auto mt-4 md:mt-0">
                         <button
-                        onClick={() => handleRemoveFromCart(item.id)}
+                            onClick={() => handleRemoveFromCart(item.id)}
                             className="w-full md:w-autohover:bg-emerald-500 px-8 py-2.5 rounded-lg font-semibold text-white bg-[#7C3AED] transition-colors cursor-pointer"
                         >
                             remove
@@ -34,6 +34,14 @@ function CartView({ cartItems, handleRemoveFromCart }) {
                     </div>
                 </div>
             ))}
+
+            {cartItems.length > 0 && (
+                <div className="flex justify-center mt-6">
+                    <button onClick={clearAllCart} className="bg-emerald-500 hover:bg-emerald-600 text-white px-10 py-3 rounded-xl font-bold shadow-lg transition-all transform hover:scale-105 cursor-pointer">
+                        Proceed to Checkout
+                    </button>
+                </div>
+            )}
         </div>
     )
 }

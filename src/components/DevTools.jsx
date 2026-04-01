@@ -39,6 +39,14 @@ function DevTools({ cartItems, setCartItems }) {
         });
     }
 
+    const clearAllCart = () => {
+        setCartItems([]);
+        toast.error("All products are removed!", {
+            autoClose: 1000,
+            position: "top-right"
+        });
+    }
+
 
     return (
         <section className="py-20 px-6 bg-white">
@@ -94,7 +102,7 @@ function DevTools({ cartItems, setCartItems }) {
                         </div>
 
                         {cartItems.length > 0 ? (
-                            <CartView cartItems={cartItems} handleRemoveFromCart={handleRemoveFromCart} />
+                            <CartView cartItems={cartItems} handleRemoveFromCart={handleRemoveFromCart} clearAllCart={clearAllCart} />
                         ) : (
                             /* Empty Cart View */
                             <div className="text-center py-20 bg-slate-50 rounded-3xl border-2 border-dashed border-slate-200">
