@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import tools from '../data/dev-tools.json'
 import DevToolsCart from './DevToolsCart';
 import { IoCartOutline } from 'react-icons/io5';
+import { toast, ToastContainer } from 'react-toastify';
 
 const tagStyles = {
     popular: 'bg-purple-100 text-purple-700',
@@ -10,8 +11,22 @@ const tagStyles = {
     default: 'bg-slate-100 text-slate-600',
 };
 
-function DevTools() {
+function DevTools({ cartItems, setCartItems }) {
     const [activeTab, setActiveTab] = useState('Products');
+
+    const handleAddToCart = (productId) => {
+        const product = tools.find(tool => tool.id === productId);
+
+        const matchingProducts = cartItems.find(item => item.id === productId);
+
+        if (!matchingProducts) {
+            setCartItems([...cartItems, product])
+            toast.success("Product is added!", {
+                autoClose: 1000,
+                position: "top-right"
+            });
+        }
+    }
 
 
     return (
@@ -46,7 +61,7 @@ function DevTools() {
                                 : 'text-slate-500 hover:text-slate-800'
                                 }`}
                         >
-                            Cart (0)
+                            Cart ({cartItems.length})
                         </button>
                     </div>
                 </div>
@@ -54,9 +69,12 @@ function DevTools() {
                 {/* --- PRODUCT GRID --- */}
                 {activeTab === 'Products' ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {tools.map((tool) => (
-                            <DevToolsCart key={tool.id} tool={tool} tagStyles={tagStyles} />
-                        ))}
+                        {tools.map((tool) => {
+                            const checkCart = cartItems.find(item => item.id === tool.id)
+
+                            return <DevToolsCart key={tool.id} tool={tool} tagStyles={tagStyles} handleAddToCart={handleAddToCart} checkCart={checkCart} />
+                        })}
+                        <ToastContainer />
                     </div>
                 ) : (
                     <div className="text-center py-20 bg-slate-50 rounded-3xl border-2 border-dashed border-slate-200">

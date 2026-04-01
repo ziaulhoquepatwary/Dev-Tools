@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from './share/Navbar'
 import Banner from './components/Banner'
 import StatsSection from './components/StatsSection'
@@ -8,12 +8,17 @@ import Pricing from './components/Pricing'
 import DevTools from './components/DevTools'
 
 function App() {
+    const [cartItems, setCartItems] = useState([]);
+
+    console.log(cartItems);
+
+
     return (
         <>
             <Navbar />
             <Banner />
             <StatsSection />
-            <DevTools />
+            <DevTools cartItems={cartItems} setCartItems={setCartItems} />
             <Pricing />
             <GetStarted />
             <Footer />

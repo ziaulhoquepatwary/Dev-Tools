@@ -1,7 +1,7 @@
 import React from 'react'
 import { BiCheck } from 'react-icons/bi';
 
-function DevToolsCart({ tool, tagStyles }) {
+function DevToolsCart({ tool, tagStyles, handleAddToCart, checkCart }) {
     return (
         <div className="border border-slate-100 rounded-3xl p-8 bg-white shadow-sm hover:shadow-xl transition-all duration-300 relative group">
 
@@ -36,8 +36,8 @@ function DevToolsCart({ tool, tagStyles }) {
                 ))}
             </ul>
 
-            <button className="w-full bg-[#7C3AED] hover:bg-purple-700 text-white py-3 rounded-2xl font-bold transition-all shadow-lg shadow-purple-200">
-                Buy Now
+            <button onClick={() => handleAddToCart(tool.id)} className={`w-full bg-[#7C3AED] hover:bg-purple-700 text-white py-3 rounded-2xl font-bold transition-all ${checkCart ? 'bg-gray-400' : 'bg-purple-600 text-white'}`}>
+                {checkCart ? "Already Added" : "Add to Cart"}
             </button>
         </div>
     )
