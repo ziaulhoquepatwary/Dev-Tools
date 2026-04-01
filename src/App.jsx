@@ -15,7 +15,7 @@ function App() {
 
     return (
         <>
-            <Navbar />
+            <Navbar cartItems={cartItems} />
             <Banner />
             <StatsSection />
             <DevTools cartItems={cartItems} setCartItems={setCartItems} />

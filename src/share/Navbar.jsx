@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import { FiShoppingCart } from 'react-icons/fi';
 
-function Navbar() {
+function Navbar({ cartItems }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const navLinks = [
@@ -34,8 +34,13 @@ function Navbar() {
 
                     {/* Actions */}
                     <div className="flex items-center space-x-4">
-                        <button className="p-2 text-gray-600 hover:text-[#7C3AED] cursor-pointer">
+                        <button className="relative p-2 text-gray-600 hover:text-[#7C3AED] cursor-pointer">
                             <FiShoppingCart className="w-6 h-6" />
+                            {cartItems.length > 0 && (
+                                <span className="bg-[#7C3AED] text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center absolute -top-1 -right-1">
+                                    {cartItems.length}
+                                </span>
+                            )}
                         </button>
 
                         <button className="hidden sm:block text-gray-700 font-medium hover:text-[#7C3AED] cursor-pointer">

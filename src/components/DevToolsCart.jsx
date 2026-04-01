@@ -36,7 +36,13 @@ function DevToolsCart({ tool, tagStyles, handleAddToCart, checkCart }) {
                 ))}
             </ul>
 
-            <button onClick={() => handleAddToCart(tool.id)} className={`w-full bg-[#7C3AED] hover:bg-purple-700 text-white py-3 rounded-2xl font-bold transition-all ${checkCart ? 'bg-gray-400' : 'bg-purple-600 text-white'}`}>
+            <button
+                onClick={() => handleAddToCart(tool.id)}
+                className={`w-full py-3 rounded-2xl font-bold transition-all duration-300 shadow-md cursor-pointer ${checkCart
+                    ? 'bg-gray-400 text-gray-100'
+                    : 'bg-[#7C3AED] hover:bg-purple-700 text-white hover:shadow-lg active:scale-95'
+                    }`}
+            >
                 {checkCart ? "Already Added" : "Add to Cart"}
             </button>
         </div>

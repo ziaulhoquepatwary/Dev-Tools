@@ -3,6 +3,7 @@ import tools from '../data/dev-tools.json'
 import DevToolsCart from './DevToolsCart';
 import { IoCartOutline } from 'react-icons/io5';
 import { toast, ToastContainer } from 'react-toastify';
+import CartView from './CartView';
 
 const tagStyles = {
     popular: 'bg-purple-100 text-purple-700',
@@ -77,9 +78,21 @@ function DevTools({ cartItems, setCartItems }) {
                         <ToastContainer />
                     </div>
                 ) : (
-                    <div className="text-center py-20 bg-slate-50 rounded-3xl border-2 border-dashed border-slate-200">
-                        <IoCartOutline size={35} className='mx-auto text-[#7C3AED]' />
-                        <p className="text-slate-400">Your cart is empty</p>
+                    <div className="space-y-4">
+                        {/* Cart Header Info */}
+                        <div className="flex justify-between items-center mb-6">
+                            <h3 className="text-xl font-bold text-slate-800">{cartItems.length} Apps Found</h3>
+                        </div>
+
+                        {cartItems.length > 0 ? (
+                            <CartView cartItems={cartItems} />
+                        ) : (
+                            /* Empty Cart View */
+                            <div className="text-center py-20 bg-slate-50 rounded-3xl border-2 border-dashed border-slate-200">
+                                <IoCartOutline size={35} className='mx-auto text-[#7C3AED]' />
+                                <p className="text-slate-400 mt-2">Your cart is empty</p>
+                            </div>
+                        )}
                     </div>
                 )}
 
